@@ -1,0 +1,15 @@
+.punk {
+
+
+    padding: 2rem 0;
+
+    &__slider-list {
+        display: flex;
+        flex-direction: row;
+        column-gap: 20px;
+        overflow: hidden;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 6rem;
+    }
+}
