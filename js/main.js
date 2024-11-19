@@ -29,3 +29,33 @@ menuLinks.forEach((link, index) => {
 });
 
 
+
+document.addEventListener("DOMContentLoaded", () => {
+    const track = document.querySelector('.mask'); // Контейнер зі слайдами
+    const slides = document.querySelectorAll('.mask__slider'); // Усі слайди
+    const buttonLeft = document.getElementById('slide-left'); // Кнопка вліво
+    const buttonRight = document.getElementById('slide-right'); // Кнопка вправо
+
+    let currentSlide = 0; // Поточний індекс слайда
+    const slideWidth = slides[0].offsetWidth; 
+
+    // Функція оновлення позиції стрічки
+    const updateSlidePosition = () => {
+        const offset = -currentSlide * slideWidth; // Вираховуємо зсув
+        track.style.transform = `translateX(${offset}px)`;
+        track.style.transition = 'transform 0.3s ease'; // Анімація
+    };
+
+    buttonLeft.addEventListener('click', () => {
+        currentSlide = (currentSlide > 0) ? currentSlide - 1 : slides.length - 1;
+        updateSlidePosition();
+    });
+    
+    buttonRight.addEventListener('click', () => {
+        currentSlide = (currentSlide < slides.length - 1) ? currentSlide + 1 : 0;
+        updateSlidePosition();
+    });
+    
+});
+
+

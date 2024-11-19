@@ -224,3 +224,15 @@
         margin-bottom: 3rem;
     }
 }
+
+.mask {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.mask__slider {
+    display: inline-block;
+    width: 33.33%; /* Ширина кожного слайду */
+}
+
