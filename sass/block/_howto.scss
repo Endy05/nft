@@ -1,0 +1,198 @@
+.howto {
+    position: relative;
+    z-index: 1;
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+    background-color: var(--color-dark);
+
+    &__padding {
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+
+    &__container {
+        margin-right: auto !important;
+        margin-right: auto !important;
+        width: 100%;
+        max-width: 110rem;
+    }
+
+    &__vx {
+        padding-right: 0rem;
+        padding-left: 0rem;
+        padding-top: 7rem;
+        padding-bottom: 7rem;
+    }
+
+    &__component {
+        display: grid;
+        align-items: start;
+        grid-auto-columns: 1fr;
+        grid-column-gap: 4rem;
+        grid-row-gap: 4rem;
+        grid-template-columns: 0.75fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    &__content-left-ts {
+        margin-right: 0rem;
+        margin-bottom: 0rem;
+        margin-left: 0rem;
+        margin-top: 1.5rem;
+    }
+
+    &__content-title {
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+        font-size: 2.5rem;
+        line-height: 1.2;
+        font-weight: 500;
+        letter-spacing: -0.03em;
+    }
+
+    &__timeline-wrapper {
+        position: relative;
+    }
+
+    &__progres-bar-wrapper {
+        position: absolute;
+        left: 2.5rem;
+        top: 10%;
+        right: auto;
+        width: 1px;
+        height: 75%;
+        background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    &__progress-bar {
+        width: 1px;
+        background-color: #fff;
+        height: 100%;
+    }
+
+    &__timeline-step {
+        display: grid;
+        grid-column-gap: 2.5rem;
+        grid-row-gap: 0px;
+        grid-template-columns: max-content 1fr;
+        grid-template-rows: auto;
+        grid-auto-columns: 1fr;
+    }
+
+    &__timeline-left {
+        position: relative;
+        display: flex;
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+        font-display: column;
+        justify-content: flex-start;
+    }
+
+    &__timeline-icon-wrapper {
+        position: relative;
+        z-index: 1;
+        margin-top: -1rem;
+        padding: 1rem;
+    }
+
+    &__timeline-right {
+        padding-top: 2.5rem;
+        padding-bottom: 3.5rem;
+    }
+
+    &__bs {
+        margin-top: 0rem;
+        margin-right: 0rem;
+        margin-left: 0rem;
+        margin-bottom: 1.5rem;
+    }
+
+    &__bx {
+        margin-top: 0rem;
+        margin-right: 0rem;
+        margin-left: 0rem;
+        margin-bottom: 1rem;
+    }
+
+    &__bx-title {
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+        font-size: 1.5rem;
+        line-height: 1.4;
+        font-weight: 500;
+    }
+
+    &__text {
+        margin-bottom: 0rem;
+        color: rgba(255, 255, 255, 0.8);
+        letter-spacing: 0em;
+        line-height: 1.4;
+        font-size: 1.125rem;
+    }
+
+    &__ts {
+        margin-top: 1.5rem;
+        margin-right: 0rem;
+        margin-left: 0rem;
+        margin-bottom: 0rem;
+    }
+
+    &__button-metamask {
+        padding: 0.75rem 2rem;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 100px;
+        background-color: transparent;
+        transition: all 200ms ease;
+        color: #fff;
+        text-align: center;
+        font-weight: 500;
+        letter-spacing: 0em;
+        display: inline-block;
+        line-height: inherit;
+        cursor: pointer;
+
+        &:hover {
+            border-color: #fff;
+        }
+    }
+}
+
+
+.icon-1x1-medium {
+    width: 3rem;
+    height: 3rem;
+}
+    
+.qqqq {
+    position: relative;
+    top: -5px;
+    width: 50px;
+    height: 20px;
+    background-color: var(--color-dark);
+}
+
+.qqqqtop {
+    position: relative;
+    top: -5px;
+    width: 50px;
+    height: 20px;
+    background-color: var(--color-dark);
+    top: 1px;
+}
+
+@media (max-width: 990px) {
+    .howto__component {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .howto__content-title {
+        font-size: 2rem;
+    }
+    .howto__vx {
+        padding-top: 3.5rem;
+    }
+
+}
+

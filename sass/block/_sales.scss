@@ -76,27 +76,151 @@
             clear: both;
         }
     }
-}
 
+    &__buttons {
+        display: flex;
+        flex-direction: row;
+        column-gap: 10px;
+        margin-top: 3rem;
+    }
+
+    &__button-left {
+        left: 0rem;
+        right: auto;
+        top: auto;
+        display: flex;
+        width: 4rem;
+        height: 4rem;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid rgba(16, 17, 17, 0.2);
+        border-radius: 100%;
+        transition: all 200ms ease;
+        color: #000;
+        z-index: 3;
+
+        &:hover {
+            border-color: #000;
+        }
+    }
+
+    &__button-right {
+        left: 4rem;
+        top: auto;
+        right: auto;
+        display: flex;
+        width: 4rem;
+        height: 4rem;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid rgba(16, 17, 17, 0.2);
+        border-radius: 100%;
+        color: #000;  
+        z-index: 4; 
+        
+        &:hover {
+            border-color: #000;
+        }
+    }
+}
 .mask {
-    overflow: visible;
-    width: 33.33%;
+    overflow: visible; // Обмежує вихід елементів за межі
     position: relative;
     display: block;
-    z-index: 1;
-    left: 0;
-    right: 0;
-    height: 100%;
-    white-space: nowrap;
+    width: 100%;
+    white-space: nowrap; // Зберігає горизонтальне вирівнювання
 
     &__slider {
+        display: inline-block; // Зберігаємо горизонтальне розташування слайдів
+        vertical-align: top; 
+        width: 33.33%; // Пропорція для кожного слайду
         padding-right: 1.5rem;
+        box-sizing: border-box; // Враховує відступи
+    }
+
+    &__slider-item {
+        display: flex;
+        flex-direction: column; // Елементи розташовуються вертикально
+        align-items: stretch;
+    }
+
+    &__bs {
+        margin-bottom: 1.5rem; // Відступ між зображенням і текстом
+    }
+
+    &__image {
+        width: 100%;
+        padding-top: 100%; // Забезпечує квадратну пропорцію для зображення
         position: relative;
-        display: inline-block;
-        vertical-align: top;
+        overflow: hidden;
+    }
+
+    &__image-img {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
-        white-space: normal;
-        text-align: left;
+        object-fit: cover; // Зберігає пропорції зображення
+        border-radius: 1.5rem; // Ваш стиль
+    }
+
+    &__bx {
+        margin-bottom: 1rem; // Відступ між заголовком і текстом
+    }
+
+    &__hs {
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+    }
+
+    &__tsm {
+        font-size: 1.125rem;
+        margin-bottom: 0.5rem;
+    }
+
+    &__date-text {
+        color: #565656;
+        font-size: 1rem;
+    }
+}
+
+
+.transation {
+    &__tx {
+        padding-top: 0rem;
+    }
+}
+
+.text-upadated {
+    font-size: 1.35rem;
+    color: #565656;
+
+}
+
+@media (max-width: 990px) {
+    .mask__slider {
+        width: 85%;
+    }
+}
+
+@media (max-width: 768px) {
+    .sales__tx {
+        padding-top: 3rem;
+    }
+
+    .sales__content-type {
+        grid-template-columns: 1fr;
+        display: block;
+    }
+
+    .sales__content-text {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .sales__bx {
+        margin-bottom: 3rem;
     }
 }

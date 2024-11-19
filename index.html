@@ -16,7 +16,7 @@
                 <nav class="navbar__menu">
                     <a class="navbar__link" href="#aboutus">About</a>
                     <a class="navbar__link" href="#collection">Collection</a>
-                    <a class="navbar__link" href="#">FAQs</a>
+                    <a class="navbar__link" href="#faqid">FAQs</a>
                     <a href="https://opensea.io/collection/cryptopunks" class="navbar__button">Connect wallet</a>
                     <div class="navbar__social">
                         <a href="https://twitter.com/larvalab" target="_blank" class="navbar__social-link">
@@ -28,15 +28,31 @@
                     </div>
                 </nav>
                 <div class="navbar__menu-button">
-                    <div class="menu-icon">
-                        <div class="menu-icon_line-top"></div>
-                        <div class="menu-icon_line-middle">
+                    <div class="menu-icon" id="burger">
+                        <div class="menu-icon_line-top menu-line"></div>
+                        <div class="menu-icon_line-middle menu-line">
                             <div class="menu-icon_line-middle-inner"></div>
                         </div>
-                        <div class="menu-icon_line-bottom"></div>
+                        <div class="menu-icon_line-bottom menu-line"></div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="nav__overlay overlay">
+            <nav class="overlay__menu">
+                <a class="overlay__link" href="#aboutus">About</a>
+                <a class="overlay__link" href="#collection">Collection</a>
+                <a class="overlay__link" href="#faqid">FAQs</a>
+                <a href="https://opensea.io/collection/cryptopunks" class="overlay__button">Connect wallet</a>
+                <div class="overlay__social">
+                    <a href="https://twitter.com/larvalab" target="_blank" class="overlay__social-link">
+                        <img src="./images/social/twitter.svg" alt="twitter" width="24" height="24">
+                    </a>
+                    <a href="#" target="_blank" class="overlay__social-link">
+                        <img src="./images/social/discord.svg" alt="discord" width="24" height="24">
+                    </a>
+                </div>
+            </nav>
         </div>
     </header>
     <main class="main-wrapper">
@@ -89,7 +105,20 @@
                         <div class="punk__slider-wrapper">
                             <img src="./images/punks-slider/punk3.svg" alt="punk" class="punk__slider-image" loading="lazy">
                         </div>
+                        <div class="punk__slider-wrapper">
+                            <img src="./images/punks-slider/punk7.svg" alt="punk" class="punk__slider-image" loading="lazy">
+                        </div>
+                        <div class="punk__slider-wrapper">
+                            <img src="./images/punks-slider/punk2.svg" alt="punk" class="punk__slider-image" loading="lazy">
+                        </div>
+                        <div class="punk__slider-wrapper">
+                            <img src="./images/punks-slider/punk3.svg" alt="punk" class="punk__slider-image" loading="lazy">
+                        </div>
+                        <div class="punk__slider-wrapper">
+                            <img src="./images/punks-slider/punk4.svg" alt="punk" class="punk__slider-image" loading="lazy">
+                        </div>
                     </div>
+                    
                 </div>
             </section>
             <section class="blog">
@@ -182,35 +211,35 @@
                             </div>
                         </div>
                         <div class="tabs">
-                            <div  class="tabs__menu">
-                                <a class="tabs__menu-link">
+                            <div class="tabs__menu">
+                                <a class="tabs__menu-link tabs__menu-link1 active">
                                     <h5 class="tabs__menu-title">Punks with a blue background are not for sale and have no current bids.</h5>
                                 </a>
-                                <a class="tabs__menu-link">
+                                <a class="tabs__menu-link tabs__menu-link2">
                                     <h5 class="tabs__menu-title">Punks with a red background are available for sale by their owner.</h5>
                                 </a>
-                                <a class="tabs__menu-link">
+                                <a class="tabs__menu-link tabs__menu-link3">
                                     <h5 class="tabs__menu-title">Punks with a purple background have an active bid on them</h5>
                                 </a>
                             </div>
                             <div class="tabs__content">
-                                <div class="tabs__pane">
+                                <div class="tabs__pane ds-none active">
                                     <div class="tabs__image-wrapper">
-                                        <img class="tabs-image" sizes="(max-width: 479px) 100vw, (max-width: 991px) 90vw, 42vw" loading="lazy" src="./images/aboutPunk/aboutPunk.svg"/>
+                                        <img class="tabs-image" src="./images/aboutPunk/aboutPunk.svg" alt="Punk 1" />
                                     </div>
                                 </div>
                                 <div class="tabs__pane ds-none">
                                     <div class="tabs__image-wrapper">
-                                        <img class="tabs-image" sizes="(max-width: 479px) 100vw, (max-width: 991px) 90vw, 42vw" width="635"  height="635" src="./images/aboutPunk/aboutPunk2.png"/>
+                                        <img class="tabs-image" src="./images/aboutPunk/aboutPunk3.png" alt="Punk 2" />
                                     </div>
                                 </div>
                                 <div class="tabs__pane ds-none">
                                     <div class="tabs__image-wrapper">
-                                        <img class="tabs-image" sizes="(max-width: 479px) 100vw, (max-width: 991px) 90vw, 42vw" width="635"  height="635" src="./images/aboutPunk/aboutPunk3.png"/>
+                                        <img class="tabs-image" src="./images/aboutPunk/aboutPunk2.png" alt="Punk 3" />
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>                        
                     </div>
                 </div>
             </div>
@@ -340,11 +369,302 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="sales__button-left">
-                                <img src="./images/sales/button/button-left.svg" loading="lazy" alt=""/>
+                            <div class="sales__buttons">
+                                <div class="sales__button-left" id="slide-left">
+                                    <img src="./images/sales/button/button-left.svg" loading="lazy" alt="" />
+                                </div>
+                                <div class="sales__button-right" id="slide-right">
+                                    <img src="./images/sales/button/button-right.svg" loading="lazy" alt="" />
+                                </div>
                             </div>
-                            <div class="sales__button-right">
-                                <img src="./images/sales/button/button-right.svg" loading="lazy" alt=""/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sales transation" id="collection">
+            <div class="sales__padding">
+                <div class="sales__container">
+                    <div class="sales__tx transation__tx">
+                        <div class="sales__bx">
+                            <div class="sales__content-type">
+                                <h2 class="sales__content-text">Recent Transactions</h2>
+                                <a href="https://opensea.io/collection/cryptopunks" target="_blank" class="sales__button">View all</a>
+                                <p class="text-upadated">Updated 24 seconds ago</p>
+                            </div>                            
+                        </div>
+                        <div class="sales__component">
+                            <div class="saaless__component-mask mask">
+                                <div class="mask__slider">
+                                    <div class="mask__slider-item">
+                                        <div class="mask__bs mask__salles-bs">
+                                            <div class="mask__image">
+                                                <img width="426" height="426" src="./images/sales/sales-2-1.png" alt="image nft punk" class="mask__image-img">
+                                            </div>
+                                        </div>
+                                        <div class="mask__bx">
+                                            <div class="mask__hs">#3100</div>
+                                        </div>
+                                        <p class="mask__date-text">New big of 51.20 (210,265$)1</p>
+                                    </div>
+                                </div>
+                                <div class="mask__slider">
+                                    <div class="mask__slider-item">
+                                        <div class="mask__bs mask__salles-bs">
+                                            <div class="mask__image">
+                                                <img width="426" height="426" src="./images/sales/sales-2-2.png" alt="image nft punk" class="mask__image-img">
+                                            </div>
+                                        </div>
+                                        <div class="mask__bx">
+                                            <div class="mask__hs">#7431</div>
+                                        </div>
+                                        <p class="mask__date-text">New big of 51.20 (210,265$)</p>
+                                    </div>
+                                </div>
+                                <div class="mask__slider">
+                                    <div class="mask__slider-item">
+                                        <div class="mask__bs mask__salles-bs">
+                                            <div class="mask__image">
+                                                <img width="426" height="426" src="./images/sales/sales-2-3.png" alt="image nft punk" class="mask__image-img">
+                                            </div>
+                                        </div>
+                                        <div class="mask__bx">
+                                            <div class="mask__hs">#4156</div>
+                                        </div>
+                                        <p class="mask__date-text">New big of 51.20 (210,265$)</p>
+                                    </div>
+                                </div>
+                                <div class="mask__slider">
+                                    <div class="mask__slider-item">
+                                        <div class="mask__bs mask__salles-bs">
+                                            <div class="mask__image">
+                                                <img width="426" height="426" src="./images/sales/sales-2-4.png" alt="image nft punk" class="mask__image-img">
+                                            </div>
+                                        </div>
+                                        <div class="mask__bx">
+                                            <div class="mask__hs">#5217</div>
+                                        </div>
+                                        <p class="mask__date-text">New big of 51.20 (210,265$)</p>
+                                    </div>
+                                </div>
+                                <div class="mask__slider">
+                                    <div class="mask__slider-item">
+                                        <div class="mask__bs mask__salles-bs">
+                                            <div class="mask__image">
+                                                <img width="426" height="426" src="./images/sales/sales-2-5.png" alt="image nft punk" class="mask__image-img">
+                                            </div>
+                                        </div>
+                                        <div class="mask__bx">
+                                            <div class="mask__hs">#8857</div>
+                                        </div>
+                                        <p class="mask__date-text">New big of 51.20 (210,265$)</p>
+                                    </div>
+                                </div>
+                                <div class="mask__slider">
+                                    <div class="mask__slider-item">
+                                        <div class="mask__bs mask__salles-bs">
+                                            <div class="mask__image">
+                                                <img width="426" height="426" src="./images/sales/sales-2-6.png" alt="image nft punk" class="mask__image-img">
+                                            </div>
+                                        </div>
+                                        <div class="mask__bx">
+                                            <div class="mask__hs">#2140</div>
+                                        </div>
+                                        <p class="mask__date-text">New big of 51.20 (210,265$)</p>
+                                    </div>
+                                </div>
+                                <div class="mask__slider">
+                                    <div class="mask__slider-item">
+                                        <div class="mask__bs mask__salles-bs">
+                                            <div class="mask__image">
+                                                <img width="426" height="426" src="./images/sales/sales-2-7.png" alt="image nft punk" class="mask__image-img">
+                                            </div>
+                                        </div>
+                                        <div class="mask__bx">
+                                            <div class="mask__hs">#7252</div>
+                                        </div>
+                                        <p class="mask__date-text">New big of 51.20 (210,265$)</p>
+                                    </div>
+                                </div>
+                                <div class="mask__slider">
+                                    <div class="mask__slider-item">
+                                        <div class="mask__bs mask__salles-bs">
+                                            <div class="mask__image">
+                                                <img width="426" height="426" src="./images/sales/sales-2-8.png" alt="image nft punk" class="mask__image-img">
+                                            </div>
+                                        </div>
+                                        <div class="mask__bx">
+                                            <div class="mask__hs">#2338</div>
+                                        </div>
+                                        <p class="mask__date-text">New big of 51.20 (210,265$)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sales__buttons">
+                                <div class="sales__button-left" id="slide-left">
+                                    <img src="./images/sales/button/button-left.svg" loading="lazy" alt="" />
+                                </div>
+                                <div class="sales__button-right" id="slide-right">
+                                    <img src="./images/sales/button/button-right.svg" loading="lazy" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="howto">
+            <div class="howto__padding">
+                <div class="howto__container">
+                    <div class="howto__vx">
+                        <div class="howto__component">
+                            <div class="howto__content-left">
+                                <div class="howto__content-left-ts">
+                                    <h3 class="howto__content-title">
+                                        How do I get a punk?
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="howto__content-right">
+                                <div class="howto__timeline-wrapper">
+                                    <div class="howto__progres-bar-wrapper">
+                                        <div class="howto__progress-bar"></div>
+                                    </div>
+                                    <div class="howto__timeline-step">
+                                        <div class="howto__timeline-left">
+                                            <div class="howto__timeline-icon-wrapper">
+                                                <img src="./images/howto/step1.svg" loading="lazy" alt="" class="icon-1x1-medium"/>
+                                                <div class="qqqq"></div>
+                                            </div>
+                                        </div>
+                                        <div class="howto__timeline-right">
+                                            <div class="howto__text-wrapper">
+                                                <div class="howto__bs">
+                                                    <img src="./images/howto/metamask.svg" loading="lazy" alt="" class="icon-1x1-medium"/>
+                                                </div>
+                                                <div class="howto__bx">
+                                                    <h6 class="howto__bx-title">Download and install MetaMask</h6>
+                                                </div>
+                                                <p class="howto__text">
+                                                    Download and install a Chrome browser plugin called <a href="https://metamask.io/" class="text-style-link">MetaMask</a>
+                                                    . This will allow websites (that you authorize) access to your Ethereum account.
+                                                </p>
+                                                <div class="howto__ts">
+                                                    <a href="https://metamask.io/" target="_blank" class="howto__button-metamask">Download MetaMask</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>        
+                                    <div class="howto__timeline-step">
+                                        <div class="howto__timeline-left">
+                                            <div class="howto__timeline-icon-wrapper">
+                                                <div class="qqqqtop"></div>
+                                                <img src="./images/howto/step2.svg" loading="lazy" alt="" class="icon-1x1-medium"/>
+                                                <div class="qqqq"></div>
+                                            </div>
+                                        </div>
+                                        <div class="howto__timeline-right">
+                                            <div class="howto__text-wrapper">
+                                                <div class="howto__bs">
+                                                    <img src="./images/howto/ETH.svg" loading="lazy" alt="" class="icon-1x1-medium"/>
+                                                </div>
+                                                <div class="howto__bx">
+                                                    <h6 class="howto__bx-title">Buy some Ethereum</h6>
+                                                </div>
+                                                <p class="howto__text">
+                                                    If you made a new account, buy some Ethereum. The MetaMask plugin has a button that will allow you to buy Ether from Coinbase.<br/>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="howto__timeline-step">
+                                        <div class="howto__timeline-left">
+                                            <div class="howto__timeline-icon-wrapper">
+                                                <div class="qqqqtop"></div>
+                                                <img src="./images/howto/step3.svg" loading="lazy" alt="" class="icon-1x1-medium"/>
+                                            </div>
+                                        </div>
+                                        <div class="howto__timeline-right">
+                                            <div class="howto__text-wrapper">
+                                                <div class="howto__bx">
+                                                    <h6 class="howto__bx-title">Start bidding, buying and selling</h6>
+                                                </div>
+                                                <p class="howto__text">
+                                                    Once you have the plugin installed, this website will recognize it and add buttons that allow you to bid on, buy and sell punks directly in the interface.<br/>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="faq" id="faqid">
+            <div class="faq__padding">
+                <div class="faq__container">
+                    <div class="faq__vx">
+                        <div class="faq__bx">
+                            <div class="faq__wl">
+                                <div class="faq__bs">
+                                    <h2 class="faq__details">Details and FAQ</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq__component">
+                            <div class="faq__content">
+                                <div class="faq__question">
+                                    <div class="faq__lm">
+                                        Where are the images for the punks stored?<br/>
+                                    </div>
+                                </div>
+                                <p class="faq__text">
+                                    When originally released, the actual images of the punks were too large to store on the blockchain, so we took a hash of the 
+                                    <a href="https://www.larvalabs.com/public/images/cryptopunks/punks.png">
+                                        <strong>composite image</strong>
+                                    </a>
+                                    of all the punks and 
+                                    <a href="https://github.com/larvalabs/cryptopunks/blob/master/contracts/CryptoPunksMarket.sol#L5">
+                                        <strong>embeded it into the contract</strong>
+                                    </a>
+                                    . You can verify that the punks being managed by the Ethereum contract are the True Official Genuine CryptoPunks™ by calculating an SHA256 hash on the cryptopunks image and comparing it to the hash stored in the contract.Since then, due to some clever compression ideas and some help from friends of the punks we have managed to put the entire image and attribute data fully on chain. You can read more about the mechanisms and details of the process in the <a href="https://www.larvalabs.com/blog/2021-8-18-18-0/on-chain-cryptopunks" class="text-style-link">announcement blog post</a>
+                                    .
+                                </p>
+                            </div>
+                            <div class="faq__content">
+                                <div class="faq__question">
+                                    <div class="faq__lm">
+                                        Are the punks an ERC-721 token?<br/>
+                                    </div>
+                                </div>
+                                <p class="faq__text">
+                                    No. The CryptoPunks pre-date the ERC-721 standard and are a custom contract, that means it doesn &#x27;t comply with any standards. They are <em>almost</em>
+                                    an <a href="https://theethereum.wiki/w/index.php/ERC20_Token_Standard" class="text-style-link">ERC20 token</a>
+                                    . We support the methods that provide your balance so you can watch CryptoPunks as a token in your wallet and see how many you own. None of the other methods are the same since you &#x27;re not transferring a simple balance, but need to reference which specific Punk you want to work with.<br/>
+                                </p>
+                            </div>
+                            <div class="faq__content">
+                                <div class="faq__question">
+                                    <div class="faq__lm">
+                                        Where does the market data on this site come from?<br/>
+                                    </div>
+                                </div>
+                                <p class="faq__text">
+                                    The prices, bids and sales you see on this site are loaded from the Cryptopunks contract on the Ethereum blockchain. Because the Cryptopunks pre-date the ERC-721 standard (and all third party NFT marketplaces) we also needed to write a market so the punks could be transacted. We have no control over the contract governing this market, and have no access to any additional data beyond what the blockchain provides. In fact anyone else could write a web front end for it.<br/>
+                                </p>
+                            </div>
+                            <div class="faq__content">
+                                <div class="faq__question">
+                                    <div class="faq__lm">
+                                        Do you charge any fees for transactions?<br/>
+                                    </div>
+                                </div>
+                                <p class="faq__text">
+                                    No. We charge no fees for Cryptopunks transacted through the built-in market beyond the ones charged by Ethereum (gas).The contract source and more technical details are available <a href="https://github.com/larvalabs/cryptopunks" class="text-style-link">on Github</a>
+                                    .
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -352,5 +672,46 @@
             </div>
         </section>
     </main>
+    <footer class="footer">
+        <div class="footer__padding">
+            <div class="footer__container">
+                <div class="footer__vx">
+                    <div class="footer__bx">
+                        <div class="footer__gw">
+                            <a href="#" class="footer__logo-link">
+                                <img src="./images/logo.svg" loading="lazy" width="39" height="30" alt=""/>
+                            </a>
+                            <div class="footer__gl">
+                                <a href="#" class="footer__link">Buy a Punk</a>
+                                <a href="#" class="footer__link">View Full Collection</a>
+                            </div>
+                            <div class="footer__socials-wrapper">
+                                <a href="#" class="footer__social-link">
+                                    <div class="footer__social-icon">
+                                        <img src="./images/social/twitter.svg" alt="twitter" class="footer__social-image">
+                                    </div>
+                                </a>
+                                <a href="#" class="footer__social-link">
+                                    <div class="footer__social-icon">
+                                        <img src="./images/social/discord.svg" alt="discord" class="footer__social-image">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__line-divider"></div>
+                    <div class="footer__tm">
+                        <div class="footer__gw-2">
+                            <div class="footer__credit-text">© 2021 CryptoPunks. All right reserved.</div>
+                            <a href="#" class="footer__bottom-link">Privacy Policy</a>
+                            <a href="#" class="footer__bottom-link">Terms of Service</a>
+                            <a href="#" class="footer__bottom-link">Cookies Settings</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/main.js"></script>
 </body>
 </html>

@@ -122,3 +122,26 @@
     text-decoration: none;
 }
 
+@media (max-width: 990px) {
+    .blog__press-list {
+        grid-template-columns: 1fr;
+        grid-row-gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .blog__vx {
+        padding: 0rem;
+    }
+
+    .link__content-text {
+        padding-right: 0rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .blog__press-list {
+        grid-row-gap: 1rem;
+    }
+}
+
