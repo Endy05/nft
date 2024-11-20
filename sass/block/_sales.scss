@@ -225,14 +225,11 @@
     }
 }
 
-.mask {
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
-}
 
-.mask__slider {
-    display: inline-block;
-    width: 33.33%; /* Ширина кожного слайду */
+
+
+.mask-two {
+
+    transition: transform 0.3s ease-in-out; /* Плавний перехід */
 }
 

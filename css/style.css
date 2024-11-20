@@ -1012,6 +1012,10 @@ html {
     margin-bottom: 3rem;
   }
 }
+.mask-two {
+  transition: transform 0.3s ease-in-out; /* Плавний перехід */
+}
+
 .howto {
   position: relative;
   z-index: 1;

@@ -29,7 +29,6 @@ menuLinks.forEach((link, index) => {
 });
 
 
-
 document.addEventListener("DOMContentLoaded", () => {
     const track = document.querySelector('.mask'); // Контейнер зі слайдами
     const slides = document.querySelectorAll('.mask__slider'); // Усі слайди
@@ -37,25 +36,70 @@ document.addEventListener("DOMContentLoaded", () => {
     const buttonRight = document.getElementById('slide-right'); // Кнопка вправо
 
     let currentSlide = 0; // Поточний індекс слайда
-    const slideWidth = slides[0].offsetWidth; 
+    const slideWidth = slides[0].offsetWidth; // Ширина одного слайда
+    const maxSlideIndex = slides.length - 1; // Індекс останнього слайда
 
     // Функція оновлення позиції стрічки
     const updateSlidePosition = () => {
-        const offset = -currentSlide * slideWidth; // Вираховуємо зсув
+        let offset = -currentSlide * slideWidth; // Вираховуємо зсув
         track.style.transform = `translateX(${offset}px)`;
         track.style.transition = 'transform 0.3s ease'; // Анімація
     };
 
+    // Обробка кнопки вліво
     buttonLeft.addEventListener('click', () => {
-        currentSlide = (currentSlide > 0) ? currentSlide - 1 : slides.length - 1;
-        updateSlidePosition();
+        if (currentSlide > 0) {
+            currentSlide--; // Перехід до попереднього слайда
+            updateSlidePosition();
+        }
     });
-    
+
+    // Обробка кнопки вправо
     buttonRight.addEventListener('click', () => {
-        currentSlide = (currentSlide < slides.length - 1) ? currentSlide + 1 : 0;
-        updateSlidePosition();
+        if (currentSlide < maxSlideIndex) {
+            currentSlide++; // Перехід до наступного слайда
+            updateSlidePosition();
+        }
     });
-    
+
+});
+
+
+
+// Отримуємо необхідні елементи
+const sliderContainer = document.querySelector('.mask-two'); // Контейнер для всіх слайдів
+const slides = document.querySelectorAll('.mask__slider-item'); // Кожен окремий слайд
+const btnLeft = document.getElementById('slide-left-two'); // Кнопка вліво
+const btnRight = document.getElementById('slide-right-two'); // Кнопка вправо
+
+// Визначаємо поточний індекс слайда
+let currentIndex = 0;
+
+// Ширина одного слайда
+const slideWidth = slides[0].offsetWidth + 16; // Додаємо відступ між слайдами (якщо є)
+
+// Максимальна кількість слайдів
+const maxIndex = slides.length - Math.floor(sliderContainer.offsetWidth / slideWidth);
+
+// Функція для оновлення положення слайдера
+function updateSlider() {
+    sliderContainer.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+}
+
+// Обробка кліку кнопки "вліво"
+btnLeft.addEventListener('click', () => {
+    if (currentIndex > 0) {
+        currentIndex--;
+        updateSlider();
+    }
+});
+
+// Обробка кліку кнопки "вправо"
+btnRight.addEventListener('click', () => {
+    if (currentIndex < maxIndex) {
+        currentIndex++;
+        updateSlider();
+    }
 });
 
 
