@@ -1,0 +1,147 @@
+.blog {
+    &__padding{
+        padding: 0 5%;
+    }
+
+    &__conteiner {
+        margin-right: auto !important;
+        margin-left: auto !important;
+
+        width: 100%;
+        max-width: 90rem;
+    }
+
+    &__vx {
+        padding: 7rem 0;
+    }
+
+    &__wa {
+        text-align: center;
+        width: 100%;
+        max-width: 48rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__hs {
+        margin-top: 0rem;
+        margin-right: 0rem;
+        margin-left: 0rem;
+        margin: 4rem;
+        font-size: 1.5rem;
+        line-height: 1.4;
+        font-weight: 500;
+    }
+
+    &__press-list {
+        display: grid;
+        grid-column-gap: 1.5rem;
+        grid-row-gap: 4rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    &__press-link {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        border: 1px solid #565656;
+        border-radius: 1.5rem;
+        max-width: 100%;
+        font-size: inherit;
+
+        .link__content-button-img {
+            transition: transform 0.5s ease; /* Плавний перехід для обох станів */
+        }        
+
+        &:hover {
+            border: 1px solid #FFFFFF;
+            transition: 0.25s ease;
+            .link__content-top {
+                border-bottom: 1px solid #FFFFFF;
+            }
+            .link__content-button-img {
+                transform: rotate(45deg);
+                transition: .5s ease;
+            }
+        }
+    }
+
+}
+
+.link__content-top {
+    display: flex;
+    padding: 2rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1;
+    border-bottom: 1px solid #565656;
+    border-radius: 1.5rem 1.5rem 0rem 0rem;
+}
+
+.link__content-bs {
+    margin-top: 0rem;
+    margin-right: 0rem;
+    margin-left: 0rem;
+    margin-bottom: 1.5rem;
+}
+
+.link__content-logo {
+    max-height: 1.25rem;
+    object-fit: contain;
+    max-width: 100%;
+}
+
+.link__content-text {
+    font-size: 1.25rem;
+    padding-right: 3rem;
+}
+
+.link__content-bottom {
+    display: flex;
+    padding: 1rem 2rem;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 0 auto;
+    border-radius: 0rem 0rem 1.5rem 1.5rem;
+}
+
+.link__content-button {
+    display: flex;
+    width: 100%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    font-size: 1.125rem;
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: 0em;
+    text-decoration: none;
+}
+
+@media (max-width: 990px) {
+    .blog__press-list {
+        grid-template-columns: 1fr;
+        grid-row-gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .blog__vx {
+        padding: 0rem;
+    }
+
+    .link__content-text {
+        padding-right: 0rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .blog__press-list {
+        grid-row-gap: 1rem;
+    }
+}
+

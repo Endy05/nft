@@ -1,0 +1,194 @@
+.footer {
+    background-color: var(--color-dark);
+    padding-right: 5%;
+    padding-left: 5%;
+
+    &__container {
+        margin-right: auto !important;
+        margin-left: auto !important;
+        width: 100%;
+        max-width: 100rem;
+    }
+
+    &__vx {
+        padding-right: 0rem;
+        padding-left: 0rem;
+        padding-top: 5rem;
+        padding-bottom: 5rem; 
+    }
+
+    &__bx {
+        padding-top: 0rem;
+        padding-left: 0rem;
+        padding-right: 0rem;
+        padding-bottom: 5rem;
+    }
+
+    &__gw {
+        display: grid;
+        justify-content: space-between;
+        align-items: center;
+        grid-column-gap: 4vw;
+        grid-template-columns: 0.25fr 1fr 0.25fr;
+        grid-template-rows: auto;
+        grid-auto-columns: 1fr;
+        grid-row-gap: 16px;
+    }
+
+    &__logo-link {
+        justify-self: start;
+        padding-left: 0px;
+        position: relative;
+        float: left;
+        color: #333333;
+        font-size: inherit;
+    }
+
+    &__gl {
+        display: grid;
+        justify-content: center;
+        justify-items: start;
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        grid-column-gap: 1.5rem;
+        grid-template-rows: auto;
+        white-space: normal;
+    }
+
+    &__link {
+        position: relative; /* Обов'язкове для коректної роботи псевдоелемента */
+        opacity: 0.75;
+        transition: all 200ms ease;
+        font-size: 1.35rem;
+        font-weight: 500;
+        text-align: center;
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.75); /* Основний колір */
+
+        &::after {
+            content: ''; /* Декоративна лінія під посиланням */
+            position: absolute;
+            top: 100%; 
+            left: 50%; 
+            transform: translateX(-50%);
+            width: 0; 
+            height: 2px; 
+            background-color: currentColor; 
+            transition: width 0.3s ease;
+        }
+
+        &:hover {
+            color: #FFFFFF; /* Колір тексту при наведенні */
+
+            &::after {
+                width: 100%; /* Розширення лінії */
+            }
+        }
+    }
+
+    &__socials-wrapper {
+        justify-self: end;
+        display: grid;
+        align-items: start;
+        justify-items: start;
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        grid-column-gap: 0.75rem;
+        grid-row-gap: 0rem;
+        grid-template-columns: max-content;
+        grid-template-rows: auto;
+        word-spacing: normal;
+    }
+
+    &__social-link {
+        opacity: 0.75;
+        transition: all 200ms ease;
+        font-size: 1.35rem;
+        font-weight: 500;
+        text-align: center;
+        text-decoration: none;
+
+        &:hover {
+            transition: 0.3s ease;
+            filter: invert(85%) sepia(13%) saturate(646%) hue-rotate(340deg) brightness(96%) contrast(87%);
+        }
+    }
+
+    &__line-divider {
+        width: 100%;
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.15);  
+    }
+
+    &__tm {
+        padding-bottom: 0rem;
+        padding-right: 0rem;
+        padding-left: 0rem;
+        padding-top: 2rem;
+    }
+
+    &__gw-2 {
+        display: grid;
+        justify-content: center;
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        grid-column-gap: 1.5rem;
+        grid-row-gap: 0rem;
+        grid-template-columns: max-content;
+        grid-template-rows: auto;
+        word-spacing: normal;
+    }
+    
+    &__credit-text {
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 1rem;
+    }
+
+    &__bottom-link {
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 1rem;
+    }
+
+
+}
+
+
+@media (max-width:990px) {
+    .footer__gw {
+        grid-template-columns: 1fr;
+        grid-row-gap: 48px;
+    }
+
+    .footer__logo-link {
+        justify-self: center;
+    }
+
+    .footer__socials-wrapper {
+        justify-self: center;
+    }
+}
+
+@media (max-width:768px) {
+    .footer__gw-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 30px;
+    }
+
+    .footer__credit-text {
+        order: 1;
+    }
+
+    .footer__gl {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    .footer__bx {
+        padding-bottom: 3rem;
+    }
+}
+

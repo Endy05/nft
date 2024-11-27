@@ -1,0 +1,25 @@
+body {
+    font-family: var(--font-family-base);
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--color-light);
+    margin: 0;
+    padding: 0;
+  }
+
+  .bg-dark {
+    background-color: var(--color-dark);
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  h1, h2, h3, h4 {
+    font-weight: 500;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }

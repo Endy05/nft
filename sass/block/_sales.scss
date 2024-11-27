@@ -1,0 +1,235 @@
+.sales {
+    position: relative;
+    color: #101111;
+    overflow-x: hidden;
+
+    &__padding {
+        padding: 5%;
+        padding: 5%;
+    }
+
+    &__container {
+        margin-right: auto !important;
+        margin-left: auto !important;
+        width: 100%;
+        max-width: 90rem;
+    }
+
+    &__tx {
+        padding-right: 0rem;
+        padding-bottom: 0rem;
+        padding-left: 0rem;
+        padding-top: 7rem;
+    }
+
+    &__bx {
+        margin-top: 0rem;
+        margin-right: 0rem;
+        margin-left: 0rem;
+        margin-bottom: 7rem;
+    }
+
+    &__content-type {
+        display: grid;
+        justify-content: space-between;
+        align-items: center;
+        grid-auto-columns: 1fr;
+        grid-column-gap: 5rem;
+        grid-row-gap: 1rem;
+        grid-template-columns: 1fr max-content;
+    }    
+
+    &__content-text {
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+        font-size: 3.75rem;
+        line-height: 1.2;
+        font-weight: 500;
+        letter-spacing: -0.03em;
+    }
+
+    &__button {
+        padding: 0.9rem 2.5rem;
+        border-radius: 100px;
+        background-color: transparent;
+        font-size: 1.5rem;
+        transition: all 200ms ease;
+        font-weight: 500;
+        text-align: center;
+        letter-spacing: 0rem;
+        display: inline-block;
+        line-height: inherit;
+        text-decoration: none;
+        cursor: pointer;
+        border: 1px solid rgba(16, 17, 17, 0.2);
+
+        &:hover {
+            border-color: #101111;
+        }
+
+        &__component {
+            position: relative;
+            height: auto;
+            padding-bottom: 6rem;
+            text-align: center;
+            background-color: #dddddd;
+            clear: both;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: row;
+        column-gap: 10px;
+        margin-top: 3rem;
+    }
+
+    &__button-left {
+        left: 0rem;
+        right: auto;
+        top: auto;
+        display: flex;
+        width: 4rem;
+        height: 4rem;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid rgba(16, 17, 17, 0.2);
+        border-radius: 100%;
+        transition: all 200ms ease;
+        color: #000;
+        z-index: 3;
+
+        &:hover {
+            border-color: #000;
+        }
+    }
+
+    &__button-right {
+        left: 4rem;
+        top: auto;
+        right: auto;
+        display: flex;
+        width: 4rem;
+        height: 4rem;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid rgba(16, 17, 17, 0.2);
+        border-radius: 100%;
+        color: #000;  
+        z-index: 4; 
+        
+        &:hover {
+            border-color: #000;
+        }
+    }
+}
+.mask {
+    overflow: visible; // Обмежує вихід елементів за межі
+    position: relative;
+    display: block;
+    width: 100%;
+    white-space: nowrap; // Зберігає горизонтальне вирівнювання
+
+    &__slider {
+        display: inline-block; // Зберігаємо горизонтальне розташування слайдів
+        vertical-align: top; 
+        width: 33.33%; // Пропорція для кожного слайду
+        padding-right: 1.5rem;
+        box-sizing: border-box; // Враховує відступи
+    }
+
+    &__slider-item {
+        display: flex;
+        flex-direction: column; // Елементи розташовуються вертикально
+        align-items: stretch;
+    }
+
+    &__bs {
+        margin-bottom: 1.5rem; // Відступ між зображенням і текстом
+    }
+
+    &__image {
+        width: 100%;
+        padding-top: 100%; // Забезпечує квадратну пропорцію для зображення
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__image-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; // Зберігає пропорції зображення
+        border-radius: 1.5rem; // Ваш стиль
+    }
+
+    &__bx {
+        margin-bottom: 1rem; // Відступ між заголовком і текстом
+    }
+
+    &__hs {
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+    }
+
+    &__tsm {
+        font-size: 1.125rem;
+        margin-bottom: 0.5rem;
+    }
+
+    &__date-text {
+        color: #565656;
+        font-size: 1rem;
+    }
+}
+
+
+.transation {
+    &__tx {
+        padding-top: 0rem;
+    }
+}
+
+.text-upadated {
+    font-size: 1.35rem;
+    color: #565656;
+
+}
+
+@media (max-width: 990px) {
+    .mask__slider {
+        width: 85%;
+    }
+}
+
+@media (max-width: 768px) {
+    .sales__tx {
+        padding-top: 3rem;
+    }
+
+    .sales__content-type {
+        grid-template-columns: 1fr;
+        display: block;
+    }
+
+    .sales__content-text {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .sales__bx {
+        margin-bottom: 3rem;
+    }
+}
+
+
+
+
+.mask-two {
+
+    transition: transform 0.3s ease-in-out; /* Плавний перехід */
+}
+

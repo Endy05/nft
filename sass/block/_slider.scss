@@ -1,0 +1,48 @@
+.punk {
+    padding: 2rem 0;
+
+    &__slider-list {
+        display: flex;
+        flex-direction: row;
+        column-gap: 20px;
+        overflow: visible;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 6rem;
+        animation: slide 20s linear infinite; /* Анімація прокрутки */
+        width: 100%; /* Гарантуємо, що контейнер займає 100% ширини */
+        margin-left: 20px;
+    }
+
+    &__slider-content {
+        display: flex;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    /* Створюємо анімацію для прокручування */
+    @keyframes slide {
+        0% {
+            transform: translateX(0); /* Початкове положення */
+        }
+        50% {
+            transform: translateX(-50%); /* Прокручуємо на 50% ширини контейнера */
+        }
+    }
+
+    .punk__slider-wrapper {
+        flex-shrink: 0; /* Не дозволяємо елементам стискатися */
+        min-width: 100%; /* Кожен елемент займає повну ширину контейнера */
+    }
+
+    /* Для дублювання елементів для безперервного руху */
+    .punk__slider-list::after {
+        content: "";
+        display: block;
+        width: 100%;
+    }
+}
+
+.punk__slider {
+    overflow: hidden;
+}
