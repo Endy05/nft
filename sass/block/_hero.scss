@@ -96,6 +96,127 @@
         padding-top: 4rem;
         padding-bottom: 4rem;
     }
+}
 
-    
+
+
+.modal {
+    display: none; /* Сховане за замовчуванням */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Напівпрозорий фон */
+    animation: fadeIn 0.5s ease; /* Додаємо анімацію */
+}
+
+/* Додаткова стилізація для вмісту модального вікна */
+.modal-content {
+    background-color: #000000d4;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(0.9); /* Початкова масштабність для ефекту */
+    animation: scaleIn 0.3s ease forwards; /* Анімація масштабування */
+}
+
+/* Анімація для фону */
+@keyframes fadeIn {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    to {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+/* Анімація для вмісту */
+@keyframes scaleIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.modal-content h2 {
+    text-align: center;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #808080;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+form label {
+    display: flex;
+    margin-top: 10px;
+    padding-left: 20px;
+    align-self: flex-start;
+}
+
+form input, form textarea {
+    width: 90%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(252, 252, 252, 0.4);
+    transition: 0.3s all ease;
+    color: rgb(244, 230, 224);
+}
+
+form input:focus, form textarea:focus {
+    border-color: orange; /* Синя рамка під час фокусу */
+    outline: none; /* Забираємо стандартне виділення браузера */
+    background-color: rgba(255, 255, 255, 0.8); /* Змінюємо фон */
+    box-shadow: 0 0 8px orange; /* Додаємо ефект підсвічування */
+    color: black;
+}
+
+form button {
+    background-color: #ffffff;
+    color: black;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s all ease;
+}
+
+form button:hover {
+    background: #363a3d80;
+     color: orange;
 }

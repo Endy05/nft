@@ -82,6 +82,18 @@
         }
 
     }
+
+    .navbar__button-contactus {
+        border-radius: 50px;
+        padding: 15px 20px;
+        background-color: rgb(89, 75, 75);
+        transition: 300ms all ease;
+
+        &:hover {
+            background-color: #323030;
+            color: orange;
+        }
+    }
 }
 
 .container {

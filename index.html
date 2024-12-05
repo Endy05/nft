@@ -17,6 +17,7 @@
                     <a class="navbar__link" href="#aboutus">About</a>
                     <a class="navbar__link" href="#collection">Collection</a>
                     <a class="navbar__link" href="#faqid">FAQs</a>
+                    <!-- <a href="https://opensea.io/collection/cryptopunks" class="navbar__button-contactus">Contact us</a> -->
                     <a href="https://opensea.io/collection/cryptopunks" class="navbar__button">Connect wallet</a>
                     <div class="navbar__social">
                         <a href="https://twitter.com/larvalab" target="_blank" class="navbar__social-link">
@@ -71,12 +72,30 @@
                                     </div>
                                 </div>
                                 <div class="hero__button">
-                                    <a href="https://opensea.io/collection/cryptopunks" target="_blank" class="hero__button-link">Buy a Punk</a>
+                                    <a href="#" class="hero__button-link" id="openModal">Mint now</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div id="feedbackModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-button" id="closeModal">&times;</span>
+                        <h2>Feedback</h2>
+                        <form id="feedbackForm" action="https://formspree.io/f/mdkojkad" method="POST">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                            
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                            
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                            
+                            <button type="submit">Send message</button>
+                        </form>                 
+                    </div>
+                </div>             
             </section>
             <section class="punk__slider">
                 <div class="punk__slider-content">
@@ -682,8 +701,8 @@
                                 <img src="./images/logo.svg" loading="lazy" width="39" height="30" alt=""/>
                             </a>
                             <div class="footer__gl">
-                                <a href="#" class="footer__link">Buy a Punk</a>
-                                <a href="#" class="footer__link">View Full Collection</a>
+                                <a href="#aboutus" class="footer__link">Buy a Punk</a>
+                                <a href="#collection" class="footer__link">View Full Collection</a>
                             </div>
                             <div class="footer__socials-wrapper">
                                 <a href="#" class="footer__social-link">
@@ -712,6 +731,8 @@
             </div>
         </div>
     </footer>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/modal.js"></script>
 </body>
 </html>
