@@ -89,10 +89,10 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Error:', error);
             feedbackForm.reset(); // Очищення полів форми після успішної відправки
 
-                // Показуємо повідомлення про успіх
+            // Показуємо повідомлення про успіх
             successMessageContainer.style.display = 'block';
 
-                // Через 3 секунди ховаємо повідомлення
+            // Через 3 секунди ховаємо повідомлення
             setTimeout(() => {
                 successMessageContainer.style.display = 'none';
             }, 3000);
